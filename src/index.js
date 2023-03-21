@@ -1,7 +1,7 @@
 import './index.css';
 
 const movieList = document.querySelector('#movie');
-
+/* eslint-disable no-underscore-dangle */
 function getMealList() {
   fetch('https://api.tvmaze.com/singlesearch/shows?q=girls&embed=episodes')
     .then((response) => response.json())
