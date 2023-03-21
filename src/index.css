@@ -1,4 +1,148 @@
-h1 {
-    color: red;
-    text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tenne-tawny: #d65108;
+  --tenne-tawny-dark: #b54507;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  font-size: 1.05rem;
+}
+
+.text {
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.movie-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+#movie {
+  margin: 2.4rem 0;
+}
+
+.movie-item-wrapper {
+  background-color: wheat;
+}
+
+.movie-item {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.movie-img img {
+  border-radius: 2rem;
+  width: 100%;
+  display: block;
+}
+
+.movie-name {
+  padding: 0.5rem 0.5rem;
+}
+
+.movie-name h3 {
+  font-size: 1.4rem;
+}
+
+.likeholder {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 1rem;
+}
+
+.likeholder h5 {
+  padding-top: 3px;
+}
+
+.recipe-btn {
+  text-decoration: none;
+  color: #fff;
+  background: var(--tenne-tawny);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.recipe-btn:hover {
+  background: var(--tenne-tawny-dark);
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .movie-search-box {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #movie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .movie-item {
+    margin: 0;
+  }
+
+  .movie-details {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #movie {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
