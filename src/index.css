@@ -90,7 +90,7 @@ body {
   padding-top: 3px;
 }
 
-.recipe-btn {
+.comment-btn {
   text-decoration: none;
   color: #fff;
   background: var(--tenne-tawny);
@@ -112,7 +112,7 @@ body {
   -o-transition: all 0.4s linear;
 }
 
-.recipe-btn:hover {
+.comment-btn:hover {
   background: var(--tenne-tawny-dark);
 }
 
