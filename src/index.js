@@ -31,6 +31,4 @@ function getMealList() {
       }
     });
 }
-document.addEventListener('DOMContentLoaded', () => {
-  getMealList();
-});
+getMealList();
