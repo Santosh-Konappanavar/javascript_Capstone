@@ -158,7 +158,7 @@
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkjavascript_Capstone"] = self["webpackChunkjavascript_Capstone"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkjavascript_capstone"] = self["webpackChunkjavascript_capstone"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
