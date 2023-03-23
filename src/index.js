@@ -3,7 +3,7 @@ import './index.css';
 const movieList = document.querySelector('#movie');
 
 function getMealList() {
-  fetch('https://api.tvmaze.com/shows')
+  fetch('http://api.tvmaze.com/shows')
     .then((response) => response.json())
     .then((shows) => {
       if (shows) {
