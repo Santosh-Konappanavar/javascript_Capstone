@@ -39,7 +39,7 @@ body {
 
 .movie-wrapper {
   max-width: 1280px;
-  margin: 2.4rem 0;
+  margin: 2.4rem 0 0.5rem 0;
   padding: 2rem;
   background-color: darkcyan;
   text-align: center;
@@ -93,7 +93,7 @@ body {
 .comment-btn {
   text-decoration: none;
   color: #fff;
-  background: var(--tenne-tawny);
+  background: darkcyan;
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0.75rem 0;
@@ -114,15 +114,6 @@ body {
 
 .comment-btn:hover {
   background: var(--tenne-tawny-dark);
-}
-
-/* Media Queries */
-@media screen and (min-width: 600px) {
-  .movie-search-box {
-    width: 540px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .movie-details {
@@ -206,7 +197,7 @@ form input {
 }
 
 .show-details-content p:not(.show-category) {
-  padding: 0.5rem 0;
+  padding: 0 0.5rem;
 }
 
 .movie-close-btn {
@@ -227,21 +218,30 @@ form input {
 
 .movie-title {
   letter-spacing: 1px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
 .show-category {
   font-weight: 600;
   color: wheat;
   display: inline-block;
-  padding: -15px 2rem 5px 2rem;
+  padding: 0 2rem;
   border-radius: 0.3rem;
 }
 
 .summary {
   text-align: justify;
-  padding-top: -12px;
+  padding-top: -2rem;
   font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .movie-search-box {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
