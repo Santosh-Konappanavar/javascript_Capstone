@@ -1,5 +1,5 @@
-import { getMovies, getLikes, postLikes } from './api.js';
-import popupWin from './commentPopup.js';
+import { getMovies, getLikes, postLikes } from './getData.js';
+import popupWin from './popWindow.js';
 
 const object = [];
 const commentPopup = document.querySelector('.comment-popup');
@@ -29,7 +29,7 @@ const buildDivElement = (ldMovies, show) => {
 };
 
 const CreateMovieElement = async (loadMovie, show) => {
-  const flix = document.querySelector('.flix');
+  const number = document.querySelector('.Number');
   loadMovie.innerHTML = '';
   const result = await getLikes();
   const likesData = result.data;
@@ -43,7 +43,7 @@ const CreateMovieElement = async (loadMovie, show) => {
   for (let i = 0; i < updatedMovies.length; i += 1) {
     buildDivElement(loadMovie, updatedMovies[i]);
   }
-  flix.textContent = `Show (${show.length})`;
+  number.textContent = `Show (${show.length})`;
 };
 
 const showMovies = async () => {
@@ -57,11 +57,11 @@ const showMovies = async () => {
 const parentElement = document.querySelector('.movie-wrapper');
 parentElement.addEventListener('click', (e) => {
   if (e.target.matches('.lni.lni-heart')) {
-    const flixId = e.target.id;
-    postLikes(flixId).then((result) => {
+    const numberId = e.target.id;
+    postLikes(numberId).then((result) => {
       if (result.success) {
         getLikes().then((resultLike) => {
-          const newLikes = resultLike.data.find((newlikes) => newlikes.item_id === flixId);
+          const newLikes = resultLike.data.find((newlikes) => newlikes.item_id === numberId);
           const newParent = e.target.parentElement.parentElement;
           const addLikes = newParent.querySelector('.likes-count');
           addLikes.classList.add('transition');

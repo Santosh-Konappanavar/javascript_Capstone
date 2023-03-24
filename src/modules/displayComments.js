@@ -1,4 +1,4 @@
-import countComments from './countcomments.js';
+import countComments from './getCommentLength.js';
 
 const displayComments = (getcomment, usercomment) => {
   usercomment.innerHTML = '';

@@ -7,17 +7,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
   background-color: #011811;
   color: #b5c7d8;
   font-size: 18px;
+  padding-right: 3rem;
 }
 
 .nav {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
   font-weight: 600;
+  padding-left: 1rem;
 }
 
 .nav a {
@@ -26,14 +28,25 @@ body {
 }
 
 .logo {
-  background-image: url();
-  background-size: 90%;
-  width: 80px;
-  height: 80px;
+  /* background-image: url(); */
+  background-size: 80%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #003b08;
+  color: beige;
+  padding-right: 1rem;
+  position: relative;
+}
+
+span#logo-text {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  text-align: center;
+  padding: 1rem;
 }
 
 .movie-wrapper {
@@ -43,9 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #012218;
-
-  /* padding-top: 30px; */
-  box-shadow: inset 2px 3px 3px 2px rgba(0, 119, 43, 0.99);
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 119, 43, 0.99);
 }
 
 .image {
@@ -58,7 +69,7 @@ body {
 
 .popup-img {
   display: block;
-  margin-top: 2.5rem;
+  margin: 2.5rem auto 0 auto;
   border-radius: 10%;
 }
 
@@ -113,7 +124,7 @@ body {
   color: whitesmoke;
   background: #005135;
   border-radius: 2rem;
-  width: 80%;
+  width: 60%;
   height: 100%;
   overflow-y: scroll;
   display: none;
@@ -161,7 +172,7 @@ p.summary {
   display: block;
   width: 100%;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 900;
   padding: 2% 0;
   margin-left: 95%;
@@ -222,6 +233,16 @@ footer {
   height: 80px;
   justify-content: center;
   align-items: center;
+}
+
+footer p {
+  font-size: 20px;
+  word-spacing: 3px;
+}
+
+footer b {
+  font-style: italic;
+  color: #4cfa02;
 }
 
 @media screen and (min-width: 768px) {

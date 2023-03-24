@@ -1,4 +1,4 @@
-import getcomments from './getComments.js';
+import getcomments from './retrieveComments.js';
 import displayComments from './displayComments.js';
 
 const commentAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/6jTH3jOos7OpnHxCg6lz/comments/';
