@@ -1,0 +1,267 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --tenne-tawny: #d65108;
+  --tenne-tawny-dark: #b54507;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  font-size: 1.05rem;
+}
+
+.text {
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+.movie-wrapper {
+  max-width: 1280px;
+  margin: 2.4rem 0;
+  padding: 2rem;
+  background-color: darkcyan;
+  text-align: center;
+}
+
+#movie {
+  margin: 2.4rem 0;
+}
+
+.movie-item-wrapper {
+  background-color: wheat;
+}
+
+.movie-item {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 2.5rem 0;
+  position: relative;
+}
+
+.movie-img img {
+  border-radius: 2rem;
+  width: 100%;
+  display: block;
+}
+
+.movie-name {
+  padding: 0.5rem 0.5rem;
+}
+
+.movie-name h3 {
+  font-size: 1.4rem;
+}
+
+.likeholder {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 1rem;
+}
+
+.likeholder h5 {
+  padding-top: 3px;
+}
+
+.comment-btn {
+  text-decoration: none;
+  color: #fff;
+  background: var(--tenne-tawny);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+.comment-btn:hover {
+  background: var(--tenne-tawny-dark);
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .movie-search-box {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.movie-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  background: darkcyan;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: none;
+  padding: 0 0;
+}
+
+.show-details-content {
+  margin: 5px 2rem;
+}
+
+.movie-show-img img {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+.movie-details .movie-show-img img {
+  width: 40%;
+  height: 20%;
+  border-radius: 30%;
+}
+
+.comment-holder {
+  margin-bottom: 12px;
+}
+
+.comment-holder li {
+  list-style: none;
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px 10rem;
+  flex: 1;
+}
+
+.submit-btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 2s;
+}
+
+.save-msg {
+  font-size: 14px;
+  font-weight: 600;
+  color: #00ff1a;
+  margin-top: -20px;
+}
+
+.submit-btn:hover {
+  background-color: darkcyan;
+  color: whitesmoke;
+  transform: scale(1);
+}
+
+form input {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.showmovie {
+  display: block;
+}
+
+.show-details-content p:not(.show-category) {
+  padding: 0.5rem 0;
+}
+
+.movie-close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 1.8rem;
+  background: #fff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.movie-title {
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+
+.show-category {
+  font-weight: 600;
+  color: wheat;
+  display: inline-block;
+  padding: -15px 2rem 5px 2rem;
+  border-radius: 0.3rem;
+}
+
+.summary {
+  text-align: justify;
+  padding-top: -12px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  #movie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .movie-item {
+    margin: 0;
+  }
+
+  .movie-details {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #movie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

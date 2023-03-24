@@ -1,0 +1,71 @@
+const commentFunctionality =()=> {
+    const API_KEY = 'AIzaSyCg5Z6LE0AZTB2VdYxs';
+      function submitComment(event) {
+        event.preventDefault();
+        const formel = Array.from(document.querySelectorAll('form')).indexOf(event.target);
+        const username = event.target.querySelector('#username').value;
+        const comment = event.target.querySelector('#comment').value;
+        const itemId = formel + 1;
+        const payload = {
+          item_id: itemId,
+          username: username,
+          comment: comment,
+        };
+        fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_KEY}/comments`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload),
+        })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+          const saveMsg = document.querySelector('.save-msg');
+          saveMsg.innerText = 'Comment saved';
+          setTimeout(() => {
+            saveMsg.innerText = '';
+          }, 3000);
+          event.target.querySelector('#username').value = '';
+          event.target.querySelector('#comment').value = '';
+          displayComments();
+        })
+        .catch(error => console.log(error));
+      }
+    
+      async function displayComments() {
+        const commentsLists = document.querySelectorAll('.comment-list');
+        commentsLists.forEach(async (commentsList, index) => {
+          const itemId = `item${index + 1}`;
+          const commentCountElement = document.querySelectorAll('.comment-count')[index];
+    
+          try {
+            const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_KEY}/comments?item_id=${itemId}`);
+    
+            if (!response.ok) {
+              throw new Error(`Failed to fetch comments for item ${itemId}.`);
+            }
+    
+            const comments = await response.json();
+            commentsList.innerHTML = '';
+            comments.forEach((comment) => {
+              const li = document.createElement('li');
+              li.textContent = `${comment.creation_date} ${comment.username}_:  ${comment.comment}`;
+              commentsList.appendChild(li);
+            });
+            commentCountElement.innerHTML = `${comments.length}`;
+          } catch (error) {
+          }
+        });
+      }
+    
+      let commentForm = document.querySelectorAll('form');
+      commentForm.forEach((form) => {
+        form.addEventListener('submit', ()=>{
+        //   e.stopPropagation()
+          submitComment()
+        });
+      });
+      displayComments();
+    }
+module.exports = commentFunctionality;
