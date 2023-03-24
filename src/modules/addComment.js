@@ -1,7 +1,7 @@
 import getcomments from './retrieveComments.js';
 import displayComments from './displayComments.js';
 
-const commentAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/6jTH3jOos7OpnHxCg6lz/comments/';
+const commentAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DnTrjJoNQD9V1kXZAGcs/comments/';
 
 export default (button, username, text, showId) => {
   button.addEventListener('click', async (event) => {

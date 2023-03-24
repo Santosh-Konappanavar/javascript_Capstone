@@ -3,7 +3,8 @@ const movies = [77, 66, 72, 4, 55, 6, 93, 8, 22, 10, 11, 12, 13, 14, 15, 16, 18,
 const baseUrl = 'https://api.tvmaze.com';
 const showsUrl = '/shows/';
 const aPiLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const API_KEY = '6jTH3jOos7OpnHxCg6lz';
+// const API_KEY = '6jTH3jOos7OpnHxCg6lz';
+const API_KEY = 'DnTrjJoNQD9V1kXZAGcs';
 const addLike = `/apps/${API_KEY}/likes/`;
 
 const getData = async (url = '') => {
