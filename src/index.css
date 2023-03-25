@@ -1,0 +1,133 @@
+body {
+  background-color: bisque;
+  font-family: 'Gill Sans', 'Times New Roman', Times, serif, Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  background-color: #011811;
+  color: #b5c7d8;
+  font-size: 18px;
+  padding-right: 3rem;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-weight: 600;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+nav li {
+  color: whitesmoke;
+  transition: ease-in-out 2s;
+}
+
+.nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: ease-in-out 2s;
+}
+
+nav li:hover {
+  transform: scale(1.2);
+  color: #9ffa03;
+  font-size: 25px;
+}
+
+.logo {
+  /* background-image: url(); */
+  background-size: 80%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #003b08;
+  color: beige;
+  padding-right: 1rem;
+  position: relative;
+}
+
+span#logo-text {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.movie-wrapper {
+  max-width: 1280px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #012218;
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 119, 43, 0.99);
+}
+
+.image {
+  border: 5px solid #00704e;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.popup-img {
+  display: block;
+  margin: 2.5rem auto 0 auto;
+  border-radius: 10%;
+}
+
+.moviesItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 1rem;
+  color: #fff;
+}
+
+.title {
+  margin: 0;
+}
+
+.likes-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.likes-count {
+  width: 230px;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+.likes-count.transition {
+  font-size: 25px;
+  font-weight: 600;
+  color: green;
+  transition: all 0.8s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .likes-name {
+    display: flex;
+    width: 65%;
+  }
+}
