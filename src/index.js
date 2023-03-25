@@ -1,9 +1,9 @@
 import './index.css';
-import showMovies from './modules/moveiDataload.js';
+import renderMovies from './modules/moveiDataload.js';
 import countItems from './modules/countItems.js';
 
 const prepare = async () => {
-  await showMovies();
+  await renderMovies();
   countItems();
 };
 

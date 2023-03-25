@@ -35,7 +35,7 @@ const popupWin = async (show) => {
       <textarea id="textarea" placeholder="Your insights" name="comment" required minlength="1"></textarea>
       <button class="submit-btn" type="submit">Submit</button>
     </form>`;
-  
+
   const getcommentsData = await getcomments(show.id);
   const usercomment = document.querySelector('.comments-list');
   displayComments(getcommentsData, usercomment);
@@ -53,4 +53,4 @@ commentPopup.addEventListener('click', (event) => {
   }
 });
 
-export default popupWin
+export default popupWin;

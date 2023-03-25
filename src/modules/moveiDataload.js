@@ -32,9 +32,9 @@ const CreateMovieElement = async (loadMovie, show) => {
   const number = document.querySelector('.Number');
   loadMovie.innerHTML = '';
   const result = await getLikes();
-  const likesData = result.data || []; 
+  const likesData = result.data || [];
   const updatedMovies = show.map((movie) => {
-    const like = likesData.find((like) => parseInt(like.item_id, 36) === movie.id);
+    const like = likesData.find((like) => Number(like.item_id, 36) === movie.id);
     // eslint-disable-next-line no-unused-expressions
     like ? movie.likes = like.likes : movie.likes = 0;
     object.push(movie);
@@ -55,12 +55,12 @@ const showMovies = async () => {
 };
 
 const parentElement = document.querySelector('.movie-wrapper');
-parentElement.addEventListener('click', async (e) => { 
+parentElement.addEventListener('click', async (e) => {
   if (e.target.matches('.lni.lni-heart')) {
     const numberId = e.target.id;
-    const result = await postLikes(numberId); 
+    const result = await postLikes(numberId);
     if (result.success) {
-      const resultLike = await getLikes(); 
+      const resultLike = await getLikes();
       const newLikes = resultLike.data.find((newlikes) => newlikes.item_id === numberId);
       const newParent = e.target.parentElement.parentElement;
       const addLikes = newParent.querySelector('.likes-count');
