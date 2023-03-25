@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const movies = [77, 66, 72, 4, 55, 6, 93, 8, 22, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 41, 42, 37, 38, 39, 40];
+const movies = [1, 2, 3, 4, 55, 6, 93, 8, 22, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 41, 42, 37, 38, 39, 40];
 const baseUrl = 'https://api.tvmaze.com';
 const showsUrl = '/shows/';
 const aPiLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
