@@ -1,5 +1,9 @@
+import addComment from './addComment.js';
+import displayComments from './displayComments.js';
+import getcomments from './retrieveComments.js';
+
 const commentPopup = document.querySelector('.comment-popup');
-/* eslint-disable no-undef */
+
 const popupWin = async (show) => {
   const closeSign = document.createElement('span');
   closeSign.innerHTML = 'X';
