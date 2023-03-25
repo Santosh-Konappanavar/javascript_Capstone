@@ -1,4 +1,5 @@
 import { getMovies, getLikes, postLikes } from './getData.js';
+import popupWin from './popWindow.js';
 
 const object = [];
 const commentPopup = document.querySelector('.comment-popup');
@@ -22,6 +23,7 @@ const buildDivElement = (ldMovies, show) => {
   moviesItem.appendChild(btn);
   btn.addEventListener('click', () => {
     commentPopup.style.display = 'grid';
+    popupWin(show);
   });
   ldMovies.appendChild(moviesItem);
 };
