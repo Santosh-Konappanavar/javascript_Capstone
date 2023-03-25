@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import countComments from '../modules/countComments.js';
+import countComments from '../modules/getCommentLength.js';
 
 describe('comment Number', () => {
   test('Test the number of comments', () => {
