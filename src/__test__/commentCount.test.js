@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import countComments from '../modules/getCommentLength.js';
 
 describe('comment Number', () => {
