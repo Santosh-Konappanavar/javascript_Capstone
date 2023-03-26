@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link]()
+[Live Demo Link](https://santosh-konappanavar.github.io/javascript_Capstone/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -82,7 +82,7 @@ Once you have git installed on your machine you can clone project by running the
 To clone your project to your local machine
 
 ```sh
-  git clone git@github.com:dev-mamun/js-capstone.git
+  git clone git@github.com:dev-mamun/javascript-capstone.git
 ```
 
 Alternatively, you can download the zip file of your project by clicking on the `Code` button on the right side of your
@@ -93,7 +93,7 @@ project page and clicking on `Download ZIP`
 Install this project with:
 
 ```sh
-  cd js-capstone
+  cd javascript-capstone
   npm install
 ```
 
