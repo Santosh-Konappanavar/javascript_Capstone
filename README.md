@@ -29,8 +29,6 @@
 > JavaScript project - API-based webapp,
 > using webpack and ES6 features, notably modules.
 
-[live]()
-
 ### 🛠 Tech Stack <a name="tech-stack"></a>
 
 - HTML
