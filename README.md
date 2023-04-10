@@ -144,10 +144,8 @@ To check for js errors run:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Art work list
-- Like count 
-- User Like
-- Comments Popup
+- adding more components 
+- login and logout pages should be added
 
 
 <!-- CONTRIBUTING -->
