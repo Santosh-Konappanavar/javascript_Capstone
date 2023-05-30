@@ -27,7 +27,7 @@ const popupWin = async (show) => {
     </ul>
     <h2 class="form-title">Add a comment</h2>
     <form class="comment-form">
-      <input id="name" type="text" name="username" placeholder="Your name" required>
+      <input id="name" type="text" name="username" placeholder="Your name" required >
       <textarea id="textarea" placeholder="Your insights" name="comment" required minlength="1"></textarea>
       <button class="submit-btn" type="submit">Submit</button>
     </form>`;
